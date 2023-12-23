@@ -1,4 +1,19 @@
 {
   "name": "meet-mover-office-new",
-  "packageManager": "yarn@4.0.0-rc.39"
+  "packageManager": "yarn@4.0.0-rc.39",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "hwLimit": "node --env-file=.env hwLimitNotify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "dayjs": "^1.11.10",
+    "googleapis": "^129.0.0"
+  }
 }
