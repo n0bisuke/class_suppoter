@@ -42,11 +42,10 @@ jobs:
     # 実際のコマンド
     - name: start action...
       run: > 
-        NT_STUDENT_DB_ID=${{secrets.NT_STUDENT_DB_ID}}
-        NT_API_KEY=${{secrets.NT_API_KEY}}
-        DISCORD_WEBHOOK_URL=${{secrets.DISCORD_WEBHOOK_URL}}
-        DISCORD_WEBHOOK_URL_CI=${{secrets.DISCORD_WEBHOOK_URL_CI}}
-        yarn start
+        NOTION_TOKEN=${{secrets.NOTION_TOKEN}}
+        NOTION_CLASS_DBID=${{secrets.NOTION_CLASS_DBID}}
+        NOTION_KADAI_DBID=${{secrets.NOTION_KADAI_DBID}}
+        npm run hwLimit
 
     - name: git commit & push
       run: |
