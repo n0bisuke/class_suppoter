@@ -1,8 +1,8 @@
 'use strict';
 
-const getHWInfo = require('./hwLimitNotify/_getHWInfo');
-const getClassInfo = require('./hwLimitNotify/_getClassInfo');
-const postDiscord = require('./hwLimitNotify/_postDiscord');
+const getHWInfo = require('./_getHwInfo');
+const getClassInfo = require('./_getClassInfo');
+const postDiscord = require('./_postDiscord');
 
 const main = async () => {
     try {
