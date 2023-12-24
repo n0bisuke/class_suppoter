@@ -1,6 +1,6 @@
 'use strict';
 
-const getHWInfo = require('./_getHwInfo');
+const getHWInfo = require('./_getHWInfo');
 const getClassInfo = require('./_getClassInfo');
 const postDiscord = require('./_postDiscord');
 
