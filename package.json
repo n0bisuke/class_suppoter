@@ -4,7 +4,7 @@
   "main": "main.js",
   "scripts": {
     "hwLimit": "node hwLimitNotify/main.js",
-    "hwLimit:dev": "node --env-file=.env hwLimitNotify/index.js",
+    "hwLimit:dev": "node --env-file=.env hwLimitNotify/main.js",
     "ytUpdate": "node ytUpdate",
     "ytUpdate:dev": "node --env-file=.env  ytUpdate",
     "test": "echo \"Error: no test specified\" && exit 1"
