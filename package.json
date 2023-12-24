@@ -8,7 +8,7 @@
     "hwLimit:dev": "node --env-file=.env hwLimitNotify.js",
     "ytUpdate": "node ytUpdate",
     "ytUpdate:dev": "node --env-file=.env  ./ytUpdate/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1 "
   },
   "keywords": [],
   "author": "",
