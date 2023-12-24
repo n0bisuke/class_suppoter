@@ -46,6 +46,7 @@ jobs:
         NOTION_CLASS_DBID=${{secrets.NOTION_CLASS_DBID}}
         NOTION_KADAI_DBID=${{secrets.NOTION_KADAI_DBID}}
         npm run start
+        npm run hwLimit
 
     - name: git commit & push
       run: |
