@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "hwLimit": "node --env-file=.env hwLimitNotify",
+    "hwLimit": "node hwLimitNotify/index.js",
+    "hwLimit:dev": "node --env-file=.env hwLimitNotify/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
