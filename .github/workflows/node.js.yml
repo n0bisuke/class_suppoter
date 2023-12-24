@@ -52,7 +52,7 @@ jobs:
         NOTION_TOKEN=${{secrets.NOTION_TOKEN}}
         NOTION_CLASS_DBID=${{secrets.NOTION_CLASS_DBID}}
         NOTION_KADAI_DBID=${{secrets.NOTION_KADAI_DBID}}
-        yarn hwLimit
+        npm run hwLimit
 
     - name: git commit & push
       run: |
