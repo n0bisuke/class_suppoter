@@ -26,6 +26,8 @@ module.exports = (google) => {
         }
 
         console.log(`ENVから読み込み中...`);
+        console.log(process.env.GOOGLE_CLIENT_SECRET);
+        console.log(process.env.GOOGLE_TOKEN);
         credentials = JSON.parse(process.env.GOOGLE_CLIENT_SECRET);
         token = JSON.parse(process.env.GOOGLE_TOKEN);
         console.log(`ENVから読み込み成功`);
