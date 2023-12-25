@@ -8,7 +8,7 @@
     "hwLimit:dev": "node --env-file=.env ./hwLimitNotify",
     "log": "node log.js",
     "ytUpdate": "node ytUpdate",
-    "ytUpdate:dev": "node --env-file=.env  ./ytUpdate/main.js",
+    "ytUpdate:dev": "node --env-file=.env  ./ytUpdate",
     "deploy": "node log.js && git add . && git commit -m 'init' && git push origin main",
     "test": "echo \"Error: no test specified\" && exit 1 "
   },
