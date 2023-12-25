@@ -14,6 +14,8 @@ dayjs.tz.setDefault("Asia/Tokyo");
 
 (async () => {
     try {
+        const hoge = process.env.GOOGLE_CLIENT_SECRET;
+        console.log(hoge, typeof hoge);
         //ロギング
         const logjson = {
             msg: 'success',
