@@ -9,15 +9,23 @@ const getYtVideo = require('./_getYtVideo');
 
 const main = async () => {
     try {
-        //直近のクラスを検索
-        const classInfo = await getClassInfo.findAll({limit: 10});
-        console.log(classInfo);
+        /**
+         * 1. 直近のクラスを検索*/
+        console.log(`- NotionDBから最新クラス検索中...`);
+        const classInfoItems = await getClassInfo.findAll({limit: 10});
+        // console.log(`最新クラス---`, classInfo);
 
-        //workspaceの動画で直近のクラスの授業動画を検索
-        for (let i = 0, len = classInfo.length; i < len; i++) {
-          const ytVideo = await getYtVideo.findWorkSpace(google, auth, classInfo.roomId);
-          console.log(ytVideo);
+        /**
+         * 2. 検索したクラスのROOMIDを使って、workspaceの動画で直近のクラスの授業動画を検索*/
+        console.log(`- 授業の動画がないかYoutubeのworkspaceプレイリストを検索中...`);
+        let lessonVideos = [];
+        for (let i = 0, len = classInfoItems.length; i < len; i++) {
+          const lessonVideo = await getYtVideo.findWorkSpace(google, auth, classInfoItems[i].roomId);
+          if(lessonVideo !== null) {
+            lessonVideos.push(lessonVideo);
+          }
         }
+        console.log(lessonVideos);
                 //workspaceの動画でROOMIDが含まれる動画(まだ名前変更されてない)を検索
         // const ytVideo = await getYtVideo.findWorkSpace(google, auth, classInfo.roomID);
         // console.log(ytVideo);

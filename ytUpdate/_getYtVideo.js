@@ -1,6 +1,7 @@
 module.exports = {
   findWorkSpace: async (google, auth, roomId) => {
     const youtube = google.youtube({version: 'v3', auth});
+    
     try {
         const res = await youtube.playlistItems.list({
             part: 'snippet',
