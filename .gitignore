@@ -18,3 +18,4 @@ yttest
 .DS_Store
 client_secret.json
 token.json
+playground.js

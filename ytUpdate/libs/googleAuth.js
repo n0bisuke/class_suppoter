@@ -18,7 +18,7 @@ module.exports = (google) => {
 
     //fileがない場合は環境変数から読み込む
     try{
-        if(!credentials.hasOwnProperty('installed') && token.hasOwnProperty('access_token')) {
+        if(!credentials.hasOwnProperty('installed') || token.hasOwnProperty('access_token')) {
             console.log(`ENVから読み込み中...`);
             const credentialsStr = process.env.GOOGLE_CLIENT_SECRET;
             const tokenStr = process.env.GOOGLE_TOKEN;

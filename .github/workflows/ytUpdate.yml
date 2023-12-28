@@ -62,7 +62,7 @@ jobs:
       run: > 
         NOTION_TOKEN=${{secrets.NOTION_TOKEN}}
         NOTION_CLASS_DBID=${{secrets.NOTION_CLASS_DBID}}
-        NOTION_KADAI_DBID=${{secrets.NOTION_KADAI_DBID}}
+        NOTION_LESSON_DBID=${{secrets.NOTION_LESSON_DBID}}
         YT_WORKSPACE_PLAYLIST_ID=${{secrets.YT_WORKSPACE_PLAYLIST_ID}}
         npm run ytUpdate
 

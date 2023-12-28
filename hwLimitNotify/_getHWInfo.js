@@ -14,7 +14,7 @@ const getKadaiInfo = async () => {
     try {
         // 日本のタイムゾーンで現在の日時を取得し、ISO 8601形式に変換
         const today = dayjs().tz('Asia/Tokyo').format();
-        const in6days = dayjs().tz('Asia/Tokyo').add(6, 'day').format();
+        const in6days = dayjs().tz('Asia/Tokyo').add(6, 'day').format(); //6日後
 
         const notion = new Client({auth: process.env.NOTION_TOKEN});
         const response = await notion.databases.query({
