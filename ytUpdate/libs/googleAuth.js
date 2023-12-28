@@ -1,10 +1,8 @@
 const fs = require('node:fs');
 
 module.exports = (google) => {
-
-
-    let credentials = null;
-    let token = null;
+    let credentials = {};
+    let token = {};
 
     //fileから読み込む
     try {
@@ -21,7 +19,7 @@ module.exports = (google) => {
     //fileがない場合は環境変数から読み込む
     try{
         if(credentials && token) {
-            console.log(`FILEから読み込み成功`);
+            console.log(`FILEから読み込み済み`);
             return;
         }
 
@@ -35,8 +33,11 @@ module.exports = (google) => {
         console.log('TOKEN ENV READ ERROR: ' + error);
     }
 
+    console.log(`---OAuth認証スタート---`);
     const {client_secret, client_id, redirect_uris} = credentials.installed;
     const oAuth2Client = new google.auth.OAuth2(client_id, client_secret, redirect_uris[0]);
     oAuth2Client.setCredentials(token);
+    console.log(`---OAuth認証成功---`);
+    
     return oAuth2Client;
 }

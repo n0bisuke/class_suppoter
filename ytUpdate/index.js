@@ -3,7 +3,7 @@
 const {google} = require('googleapis');
 const googleAuth = require('./libs/googleAuth');
 const auth = googleAuth(google);
-console.log(`- Google認証成功 ---`);
+console.log(`-- Authクライアント作成DONE ---`);
 
 const getClassInfo = require('./_getClassInfo');
 const getYtVideo = require('./_getYtVideo');
