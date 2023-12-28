@@ -53,11 +53,6 @@ jobs:
     - name: Log action...
       run: > 
         TESTENV1=${{secrets.TESTENV1}}
-        # TESTENV2=${{secrets.TESTENV2}}
-        # TESTENV3=${{secrets.TESTENV3}}
-        # TESTENV4=${{secrets.TESTENV4}}
-        # TESTENV5=${{secrets.TESTENV5}}
-        # TESTENV6=${{secrets.TESTENV6}}
         npm run log
 
     - name: git commit & push
