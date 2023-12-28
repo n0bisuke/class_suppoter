@@ -46,7 +46,7 @@ jobs:
       with:
         name: "client_secret.json"
         json: ${{ secrets.GOOGLE_CLIENT_SECRET }}
-        dir: "ytUpdate/libs/"
+        dir: "./"
     
     # 環境変数の設定2
     - name: token.json作成
@@ -55,7 +55,7 @@ jobs:
       with:
         name: "token.json"
         json: ${{ secrets.GOOGLE_TOKEN }}
-        dir: "ytUpdate/libs/"
+        dir: "./"
 
     # 実際のコマンド
     - name: Youtube Update action...
