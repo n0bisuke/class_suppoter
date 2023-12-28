@@ -18,17 +18,14 @@ module.exports = (google) => {
 
     //fileがない場合は環境変数から読み込む
     try{
-        if(credentials && token) {
-            console.log(`FILEから読み込み済み`);
-            return;
+        if(!credentials.hasOwnProperty('installed') && token.hasOwnProperty('access_token')) {
+            console.log(`ENVから読み込み中...`);
+            const credentialsStr = process.env.GOOGLE_CLIENT_SECRET;
+            const tokenStr = process.env.GOOGLE_TOKEN;
+            credentials = JSON.parse(credentialsStr);
+            token = JSON.parse(tokenStr);
+            console.log(`ENVから読み込み成功`);
         }
-
-        console.log(`ENVから読み込み中...`);
-        const credentialsStr = process.env.GOOGLE_CLIENT_SECRET;
-        const tokenStr = process.env.GOOGLE_TOKEN;
-        credentials = JSON.parse(credentialsStr);
-        token = JSON.parse(tokenStr);
-        console.log(`ENVから読み込み成功`);
     } catch (error) {
         console.log('TOKEN ENV READ ERROR: ' + error);
     }
@@ -38,6 +35,6 @@ module.exports = (google) => {
     const oAuth2Client = new google.auth.OAuth2(client_id, client_secret, redirect_uris[0]);
     oAuth2Client.setCredentials(token);
     console.log(`---OAuth認証成功---`);
-    
+
     return oAuth2Client;
 }
