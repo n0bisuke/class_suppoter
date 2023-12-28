@@ -50,9 +50,16 @@ jobs:
     #     YT_WORKSPACE_PLAYLIST_ID=${{secrets.YT_WORKSPACE_PLAYLIST_ID}}
     #     npm run ytUpdate
 
+    - name: client_secret.json作成
+      id: create-json
+      uses: jsdaniell/create-json@v1.2.2
+      with:
+        name: "client_secret.json"
+        json: ${{ secrets.TESTENV1 }}
+        dir: "ytUpdate/libs/"
+
     - name: Log action...
       run: > 
-        TESTENV1=${{secrets.TESTENV1}}
         npm run log
 
     - name: git commit & push
