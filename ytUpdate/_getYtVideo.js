@@ -25,6 +25,16 @@ module.exports = {
     }
   },
 
+  getYtInfo: async(google, auth, channelId) => {
+    const youtube = google.youtube({version: 'v3', auth});
+
+    const response = await youtube.channels.list({
+        id: channelId,
+        part: 'snippet'
+    });
+    return response;
+  },
+
   getHOGEHOE: async (google, auth, roomId) => {
 
   }

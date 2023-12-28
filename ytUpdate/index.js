@@ -11,6 +11,12 @@ const getYtVideo = require('./_getYtVideo');
 
 const main = async () => {
     try {
+      
+      const ytInfo = await getYtVideo.getYtInfo(google, auth, 'protoout');
+      console.log(ytInfo.data);
+      // return;
+
+
         /**
          * 1. 直近のクラスを検索*/
         console.log(`- NotionDBから最新クラス検索中...`);
