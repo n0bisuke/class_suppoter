@@ -11,16 +11,6 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.tz.setDefault("Asia/Tokyo");
 
-console.log(`--TESTENV---`)
-// credentials = JSON.parse(fs.readFileSync(`./ytUpdate/libs/client_secret.json`, 'utf8'));
-console.log(JSON.parse(fs.readFileSync(`./ytUpdate/libs/client_secret.json`, 'utf8')));
-// console.log(process.env.TESTENV1, JSON.parse(process.env.TESTENV1));
-// console.log(process.env.TESTENV2, JSON.parse(process.env.TESTENV2));
-// console.log(process.env.TESTENV3, JSON.parse(process.env.TESTENV3));
-// console.log(process.env.TESTENV4, JSON.parse(process.env.TESTENV4));
-// console.log(process.env.TESTENV5, JSON.parse(process.env.TESTENV5));
-// console.log(process.env.TESTENV6, JSON.parse(process.env.TESTENV6));
-
 (async () => {
     try {
         //ロギング
