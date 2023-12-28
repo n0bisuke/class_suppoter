@@ -1,11 +1,12 @@
 module.exports = {
   findWorkSpace: async (google, auth, roomId) => {
     const youtube = google.youtube({version: 'v3', auth});
-    
+
     try {
+        console.log(`リストID:`,process.env.YT_WORKSPACE_PLAYLIST_ID);
         const res = await youtube.playlistItems.list({
             part: 'snippet',
-            maxResults: 10, // 一度に取得する最大動画数
+            maxResults: 50, // 一度に取得する最大動画数
             playlistId: process.env.YT_WORKSPACE_PLAYLIST_ID
         });
 
