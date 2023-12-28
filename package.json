@@ -9,7 +9,7 @@
     "log": "node log.js",
     "ytUpdate": "node ./ytUpdate",
     "ytUpdate:dev": "node --env-file=.env ./ytUpdate",
-    "gitpush": "git add . && git commit -m 'init' && git push origin main",
+    "gitpush": "git add . && git commit -m 'debug & update' && git push origin main",
     "deploy": "node log.js && npm run gitpush",
     "test": "echo \"Error: no test specified\" && exit 1 "
   },
